@@ -1,0 +1,18 @@
+.DS_Store
+
+# SwiftPM and build-app.sh outputs
+.build/
+build/
+.swiftpm/
+*.xcodeproj/
+xcuserdata/
+
+# Compiled reverse-engineering tools (sources live beside them) and re/extract_pkts.py output
+re/hidspy.dylib
+re/sdprobe
+re/wtest
+re/extracted/
+
+# Captures of the vendor app's traffic carry its copyrighted key images; keep them local
+re/hidspy.bin
+re/hidspy.log

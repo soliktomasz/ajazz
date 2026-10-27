@@ -10,6 +10,9 @@ talking directly to the device over IOKit HID.
 The USB protocol was reverse engineered from the vendor software; see
 [PROTOCOL.md](PROTOCOL.md) for the full write-up.
 
+> AjazzDeck is an independent project. It is not affiliated with, endorsed by or
+> supported by Ajazz. "Ajazz" and "Stream Dock" are trademarks of their owners.
+
 ## Layout
 
 | | |
@@ -177,7 +180,7 @@ Ready-made operations, organised in groups; each group is a submenu of the
 inspector's action menu. Groups live in `Sources/AjazzKit/TaskLibrary.swift` —
 adding one there is all it takes to make it appear in the app.
 
-**macOS** — presses: `macos.lockScreen` Lock Screen, `macos.sleepDisplay` Sleep Display, `macos.sleep` Sleep, `macos.screenSaver` Start Screen Saver, `macos.missionControl` Mission Control, `macos.appWindows` App Windows, `macos.showDesktop` Show Desktop, `macos.spotlight` Spotlight, `macos.screenshot` Screenshot…, `macos.emoji` Emoji & Symbols, `macos.forceQuit` Force Quit…, `macos.darkMode` Toggle Dark Mode, `macos.minimize` Minimize Window, `macos.fullScreen` Toggle Full Screen, `macos.hideApp` Hide App, `macos.ejectAll` Eject All Disks.
+**macOS** — presses: `macos.lockScreen` Lock Screen, `macos.sleepDisplay` Sleep Display, `macos.sleep` Sleep, `macos.screenSaver` Start Screen Saver, `macos.missionControl` Mission Control, `macos.appWindows` App Windows, `macos.showDesktop` Show Desktop, `macos.spotlight` Spotlight, `macos.siri` Siri, `macos.screenshot` Screenshot…, `macos.emoji` Emoji & Symbols, `macos.forceQuit` Force Quit…, `macos.darkMode` Toggle Dark Mode, `macos.minimize` Minimize Window, `macos.fullScreen` Toggle Full Screen, `macos.hideApp` Hide App, `macos.ejectAll` Eject All Disks.
 Knob turns: `macos.spaces` Switch Desktops, `macos.tabs` Switch Tabs, `macos.zoom` Zoom In / Out, `macos.undoRedo` Undo / Redo.
 Mission Control, App Windows, Show Desktop and Switch Desktops send the default
 shortcuts from System Settings ▸ Keyboard ▸ Keyboard Shortcuts.
@@ -239,6 +242,10 @@ a new model needs no UI changes. The AKP03E profile is the only verified one.
 * Control indices are not in ascending physical order (the large knob turns on
   `0x50/0x51` but presses on `0x35`). They were established by counted-press
   testing on hardware and are recorded in `DeckProfile`.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
 
 ## Credits
 
